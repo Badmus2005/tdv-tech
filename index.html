@@ -37,12 +37,20 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  </noscript>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome (Async for Performance) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -594,9 +602,10 @@
   </footer>
 
   <!-- Modal des projets -->
-  <div class="modal-overlay" id="projectModal">
+  <div class="modal-overlay" id="projectModal" aria-hidden="true" role="dialog">
     <div class="modal-content">
-      <div class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Fermer la fenêtre"><i
+          class="fa-solid fa-xmark"></i></button>
       <div class="modal-body" id="modal-body-content">
         <!-- Contenu dynamique du modal -->
       </div>
