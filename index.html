@@ -77,7 +77,7 @@
           <a href="#services" class="btn btn-secondary">
             <i class="fa-solid fa-list-check"></i> Découvrir mes services
           </a>
-          <a href="images/Cv_TCHIDEHOU Dodji Virgile.pdf" download="Cv_TCHIDEHOU Dodji Virgile.pdf"
+          <a href="images/Cv_TCHIDEHOU_Dodji_Virgile.pdf" download="Cv_TCHIDEHOU_Dodji_Virgile.pdf"
             class="btn btn-secondary" style="border-color: var(--primary);">
             <i class="fa-solid fa-download" style="color: var(--primary);"></i> Télécharger mon CV
           </a>
@@ -420,13 +420,25 @@
           <i class="fa-solid fa-arrow-right project-arrow"></i>
         </a>
 
-        <a href="#" class="project-row reveal delay-3" onclick="openModal('robotique')">
+        <a href="#" class="project-row reveal delay-3" onclick="openModal('convoyeur')">
           <div class="project-info">
-            <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="project-icon"><i class="fa-solid fa-gears"></i></div>
             <div class="project-details">
-              <h3>Robotique Automatisée</h3>
-              <p>Programmation de <strong class="hl-primary">logique embarquée complexe</strong> (capteurs ultrasons,
-                moteurs pas-à-pas) et intégration matérielle complète.</p>
+              <h3>Convoyeur de 650mm</h3>
+              <p>Système <strong class="hl-primary">conçu sur SolidWorks</strong> et <strong
+                  class="hl-secondary">imprimé en PLA</strong> pour le transport automatisé.</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right project-arrow"></i>
+        </a>
+
+        <a href="#" class="project-row reveal delay-4" onclick="openModal('compteur-numerique')">
+          <div class="project-info">
+            <div class="project-icon"><i class="fa-solid fa-microchip"></i></div>
+            <div class="project-details">
+              <h3>Compteur Électronique Numérique</h3>
+              <p>Réalisation matérielle à base de <strong class="hl-primary">circuits logiques (bascules)</strong> et
+                d'<strong class="hl-secondary">afficheurs 7 segments</strong>.</p>
             </div>
           </div>
           <i class="fa-solid fa-arrow-right project-arrow"></i>
@@ -722,11 +734,19 @@
         desc: "Ce projet met en place un asservissement en boucle fermée conçu pour maintenir des conditions thermiques précises. Basé sur un microcontrôleur, il régule le chauffage ou le refroidissement et transmet les données via une supervision web (dashboard IoT) accessible à distance.",
         icon: 'fa-temperature-half'
       },
-      'robotique': {
-        title: 'Robotique Automatisée',
-        tags: ['C/C++', 'Microcontrôleurs', 'Algorithmes'],
-        desc: "Un robot autonome conçu de A à Z : impression 3D du châssis, routing et soudure de la carte électronique, et développement d'algorithmes complexes d'évitement d'obstacles (capteurs ultrasons) et de suivi de trajectoire fluide (contrôle de moteurs pas-à-pas / PID).",
-        icon: 'fa-robot'
+      'convoyeur': {
+        title: 'Convoyeur de 650mm',
+        tags: ['SolidWorks', 'Impression 3D', 'PLA', 'Modélisation 3D'],
+        desc: "Conception et fabrication d'un système de convoyeur sur mesure de 650mm. L'ensemble des pièces mécaniques a été entièrement modélisé sous SolidWorks puis fabriqué via impression 3D en PLA, garantissant ainsi précision et légèreté.",
+        icon: 'fa-gears',
+        videoUrl: 'https://www.youtube.com/embed/6EmU694LZT4'
+      },
+      'compteur-numerique': {
+        title: 'Compteur Électronique Numérique',
+        tags: ['Électronique Numérique', 'Circuits Logiques', 'Afficheurs 7 Segments', 'Bascules'],
+        desc: "Conception et réalisation d'un compteur numérique matériel basé sur des circuits logiques standards (bascules, portes logiques) et des afficheurs 7 segments. Le projet illustre une compréhension approfondie des principes de l'électronique numérique fondamentale.",
+        icon: 'fa-microchip',
+        videoUrl: 'https://www.youtube.com/embed/AeeMU35w_BE'
       }
     };
 
@@ -739,11 +759,23 @@
       if (data) {
         let tagsHtml = data.tags.map(tag => `<span>${tag}</span>`).join('');
 
-        modalBody.innerHTML = `
+        let mediaContent = `
           <div class="modal-image-placeholder">
             <i class="fa-solid fa-image"></i>
             <span>Espace pour ajouter un Screenshot du Dashboard / Robot</span>
           </div>
+        `;
+
+        if (data.videoUrl) {
+          mediaContent = `
+            <div class="modal-video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin-bottom: 24px; background: #000;">
+              <iframe src="${data.videoUrl}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          `;
+        }
+
+        modalBody.innerHTML = `
+          ${mediaContent}
           <h2 class="modal-title">${data.title}</h2>
           <div class="modal-tags">
             ${tagsHtml}
