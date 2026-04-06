@@ -36,13 +36,13 @@ I focus on creating projects that are both **functional, efficient and visually 
 
 ## 🚀 Live Demo
 
-👉 (Add your Vercel link here)
+👉 [Visitez le site en direct : tdv-tech.vercel.app](https://tdv-tech.vercel.app/)
 
 ---
 
 ## 📸 Preview
 
-(Add screenshots of your website here)
+![Aperçu du portfolio TDV Tech](images/hero_site_tdv-tech.PNG)
 
 ---
 
