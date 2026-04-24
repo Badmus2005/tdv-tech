@@ -11,6 +11,7 @@ import Engagements from './components/Engagements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
 
       <Footer />
       <ThemeToggle />
+      <SpeedInsights />
     </>
   );
 }
