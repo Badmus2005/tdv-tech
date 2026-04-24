@@ -1,0 +1,57 @@
+.engagements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.engagement-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.engagement-card.border-accent {
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255, 107, 0, 0.05));
+  border-color: rgba(255, 107, 0, 0.2);
+}
+
+.engagement-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.engagement-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.engagement-icon.accent {
+  background: rgba(255, 107, 0, 0.1);
+  border-color: rgba(255, 107, 0, 0.3);
+  color: var(--accent);
+}
+
+.engagement-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.engagement-card p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .engagements-grid {
+    grid-template-columns: 1fr;
+  }
+}

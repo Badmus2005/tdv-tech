@@ -1,0 +1,30 @@
+.tools-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 24px;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 24px;
+  animation: scroll 30s linear infinite;
+}
+
+.tool-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 24px)); }
+}

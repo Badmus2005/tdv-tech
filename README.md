@@ -1,75 +1,16 @@
-# 🚀 TDV Tech
+# React + Vite
 
-Welcome to **TDV Tech**, my personal portfolio showcasing my work, skills and projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 👨‍💻 About Me
+Currently, two official plugins are available:
 
-I am **Tchidehou Dodji Virgile**, a developer passionate about building complete and impactful solutions.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-My work combines:
-- 💻 Web Development (Frontend & Backend)
-- ⚙️ Embedded Systems
-- 🎨 Design & Visual Identity
+## React Compiler
 
-I focus on creating projects that are both **functional, efficient and visually appealing**.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-## 🛠️ Technologies
-
-- HTML5 / CSS3 / JavaScript
-- Backend development
-- Arduino & Microcontrollers (ATmega)
-- Proteus (Simulation)
-- Git & GitHub
-
----
-
-## 📂 Features of this Portfolio
-
-- Modern and responsive design
-- Presentation of my projects
-- Description of my services
-- Contact section
-
----
-
-## 🚀 Live Demo
-
-👉 [Visitez le site en direct : tdv-tech.vercel.app](https://tdv-tech.vercel.app/)
-
----
-
-## 📸 Preview
-
-![Aperçu du portfolio TDV Tech](images/hero_site_tdv-tech.PNG)
-
----
-
-## 📬 Contact
-
-If you want to work with me or have a project:
-
-- 🔗 GitHub: https://github.com/Badmus2005  
-- 🔗 Facebook: https://www.facebook.com/atchamou05  
-- 🔗 Instagram: https://www.instagram.com/dodji_atchamou/
-- 💼 LinkedIn: https://www.linkedin.com/in/dodji-virgile-tchidehou-b1612b347/ 
-- 💬 WhatsApp: https://wa.me/2290156043081  
-- 📧 Email: tchidehoudojivirgile@gmail.com  
-- 📞 Phone: +2290156043081  
-
----
-
-## 🔥 Vision
-
-My goal is to design and develop **innovative technological solutions** combining software, hardware and creativity.
-
----
-
-## ⭐️ Support
-
-If you like this project, feel free to **star the repository** ⭐
-
----
-
-## © TDV Tech
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

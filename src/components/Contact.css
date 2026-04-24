@@ -1,0 +1,30 @@
+.contact-box {
+  border-top: 3px solid var(--primary);
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(to bottom, rgba(0, 240, 255, 0.05), rgba(255,255,255,0.02));
+}
+
+.contact-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.contact-box p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+}
+
+.contact-btns {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 40px 24px;
+  }
+  .contact-box h2 {
+    font-size: 2rem;
+  }
+}
