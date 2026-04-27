@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, ChevronRight, Cpu, Activity, Briefcase, Sparkles } from 'lucide-react';
+import { ChevronRight, Cpu, Activity, Briefcase, Sparkles } from 'lucide-react';
 import Hero3D from './Hero3D';
 import './Hero.css';
 
@@ -29,10 +29,6 @@ const Hero = () => {
             </a>
             <a href="#services" className="btn btn-secondary">
               Découvrir mes services
-            </a>
-            <a href="/images/Cv_TCHIDEHOU_Dodji_Virgile.pdf" download className="btn btn-secondary btn-icon-only" aria-label="Télécharger mon CV">
-              <Download size={18} style={{ color: 'var(--primary)' }} />
-              <span className="cv-text">CV</span>
             </a>
           </div>
         </div>
